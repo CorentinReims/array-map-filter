@@ -51,6 +51,21 @@ Sortie attendue:
 */
 
 function getStudentsPerCurriculum(campuses, curriculumName) {
+  return campuses
+    .filter(function(campusesPhpSymfony){
+      for (let i = 0; i < campusesPhpSymfony.curriculums.length; i++){
+        if (campusesPhpSymfony.curriculums[i].name.includes(curriculumName)) {
+          return campusesPhpSymfony;
+        }
+      }  
+    })
+    .map(function(cityStudents) {
+      for (let i = 0; i < cityStudents.curriculums.length; i++) {
+        if (cityStudents.curriculums[i].name.includes(curriculumName)){
+          return {[cityStudents.city]:  cityStudents.curriculums[i].numStudents}
+        }
+      }     
+    })
 }
 
 module.exports = getStudentsPerCurriculum;
