@@ -30,6 +30,7 @@ La fonction doit renvoyer un tableau d'objets, chacun contenant les propriétés
 On peut se servir de map à deux reprises dans cet exercice...
 
 En prenant les deux exemples d'arguments d'entrée, on obtiendrait ceci en sortie:
+bonjourbonjour
 
 [ {
     activity: 'Badminton',
